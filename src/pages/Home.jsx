@@ -4,6 +4,7 @@ import Footer from '../components/common/Footer';
 import Button from '../components/common/Button';
 
 import { Wrench, Code, ShieldCheck, Server, ArrowRight, MonitorSmartphone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -49,7 +50,7 @@ const Home = () => {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <button className=" bg-[#e60000] text-[20px] cursor-pointer duration-200 transition-all px-18 py-6 rounded-full hover:bg-white text-white hover:text-[#e60000] hover:border-1 font-extrabold hover:scale-105">Nos Services</button>
-                <button className=" bg-white border-[#e60000] duration-200 transition-all text-[20px] cursor-pointer font-extrabold text-[#e60000] hover:text-white border-1 px-18 py-6 rounded-full hover:bg-[#e60000] hover:scale-105">Nos Produits</button>
+                <Link to='/shop' className=" bg-white border-[#e60000] duration-200 transition-all text-[20px] cursor-pointer font-extrabold text-[#e60000] hover:text-white border-1 px-18 py-6 rounded-full hover:bg-[#e60000] hover:scale-105">Nos Produits</Link>
               </div>
             </div>
           </div>
@@ -102,9 +103,12 @@ const Home = () => {
                 <h2 className="text-3xl font-bold text-white mb-4">Besoin de matériel spécifique ?</h2>
                 <p className="text-red-100 opacity-90">Découvrez notre catalogue de serveurs, stations de travail et accessoires IT.</p>
               </div>
-              <button className="bg-white rounded-full text-[#cc0000] cursor-pointer hover:bg-gray-100 px-10 py-4 text-lg font-bold">
+              {/* <button href='/shop' className="bg-white rounded-full text-[#cc0000] cursor-pointer hover:bg-gray-100 px-10 py-4 text-lg font-bold">
                 Accéder à la Boutique
-              </button>
+              </button> */}
+              <Link to='/shop' className="bg-white rounded-full text-[#cc0000] cursor-pointer hover:bg-gray-100 px-10 py-4 text-lg font-bold">
+                Accéder à la Boutique
+              </Link>
             </div>
           </div>
         </section>
