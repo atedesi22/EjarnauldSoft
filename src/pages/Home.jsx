@@ -3,27 +3,28 @@ import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import Button from '../components/common/Button';
 
-// Données fictives pour tes prestations (facile à déplacer dans un fichier de config plus tard)
+import { Wrench, Code, ShieldCheck, Server, ArrowRight, MonitorSmartphone } from 'lucide-react';
+
 const services = [
   {
     title: "Maintenance Informatique",
-    description: "Audit, réparation et optimisation de votre parc informatique pour une performance maximale.",
-    icon: "🛠️"
+    description: "Audit et optimisation de votre parc informatique.",
+    icon: <Wrench className="text-brand" size={32} />
   },
   {
-    title: "Développement Web & Mobile",
-    description: "Conception de solutions sur mesure (PWA, SaaS) adaptées à vos besoins métiers.",
-    icon: "💻"
+    title: "Développement Web",
+    description: "Conception de solutions sur mesure (PWA, SaaS).",
+    icon: <Code className="text-brand" size={32} />
   },
   {
     title: "Sécurité & Réseaux",
-    description: "Protection de vos données et mise en place d'infrastructures réseaux sécurisées.",
-    icon: "🛡️"
+    description: "Protection de données et infrastructures sécurisées.",
+    icon: <ShieldCheck className="text-brand" size={32} />
   },
   {
-    title: "Cloud & Hébergement",
-    description: "Migration vers le cloud et gestion de serveurs haute disponibilité.",
-    icon: "☁️"
+    title: "Solutions Cloud",
+    description: "Migration et gestion de serveurs haute performance.",
+    icon: <Server className="text-brand" size={32} />
   }
 ];
 
@@ -72,23 +73,16 @@ const Home = () => {
               {services.map((service, index) => (
                 <div 
                   key={index} 
-                  className="group bg-pure-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-brand-light transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                  className="group bg-pure-white p-8 rounded-2xl border border-gray-100 hover:border-brand-light transition-all"
                 >
-                  <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {service.icon}
+                  <div className="mb-6 p-3 bg-red-50 w-fit rounded-lg group-hover:bg-brand group-hover:text-white transition-colors">
+                    {service.icon} {/* L'icône Lucide ici */}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-dark">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-                  <a href="#" className="inline-flex items-center text-brand font-semibold text-sm hover:underline">
-                    Détails du service
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
+                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                  <p className="text-gray-500 text-sm mb-6">{service.description}</p>
+                  <Button variant="ghost" icon={ArrowRight} iconPosition="right" className="!p-0 text-brand">
+                    Détails
+                  </Button>
                 </div>
               ))}
             </div>

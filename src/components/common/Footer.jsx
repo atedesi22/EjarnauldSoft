@@ -1,4 +1,5 @@
 import React from 'react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -38,11 +39,18 @@ const Footer = () => {
 
           <div>
             <h4 className="font-bold text-brand-dark mb-4">Suivez-nous</h4>
-            <div className="flex space-x-4">
-              {/* Icônes réseaux sociaux simplifiées */}
-              <div className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-brand hover:text-white transition-all cursor-pointer">f</div>
-              <div className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-brand hover:text-white transition-all cursor-pointer">in</div>
-            </div>
+            // Dans la colonne Contact du Footer :
+            <ul className="space-y-4 text-sm text-gray-600">
+            <li className="flex items-center gap-3">
+                <MapPin size={18} className="text-brand" /> Douala, Cameroun
+            </li>
+            <li className="flex items-center gap-3">
+                <Phone size={18} className="text-brand" /> +237 ...
+            </li>
+            <li className="flex items-center gap-3">
+                <Mail size={18} className="text-brand" /> contact@techcorp.cm
+            </li>
+            </ul>
           </div>
 
         </div>

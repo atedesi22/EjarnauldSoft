@@ -1,7 +1,7 @@
 import React from 'react';
+import { Icon, Sparkles } from 'lucide-react';
 
-const Button = ({ children, variant = 'primary', className = '', ...props }) => {
-  const variants = {
+const Button = ({ children, variant = 'primary', icon: Icon, iconPosition = 'left', className = '', ...props }) => {  const variants = {
     // Utilisation de tes rouges configurés
     primary: 'bg-brand text-white hover:bg-brand-light active:bg-brand-dark',
     outline: 'border-2 border-brand text-brand hover:bg-brand hover:text-white',
@@ -15,7 +15,10 @@ const Button = ({ children, variant = 'primary', className = '', ...props }) => 
       className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-200 text-sm ${variants[variant]} ${className}`}
       {...props}
     >
-      {children}
+        {variant === 'nova' && <Sparkles size={18}/>}
+        {Icon && iconPosition === 'left' && <Icon size={18}/>}
+        {children}
+        {Icon && iconPosition === 'right' && <Icon size={18} />}
     </button>
   );
 };
