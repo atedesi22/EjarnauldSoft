@@ -3,6 +3,7 @@ import { Search, Filter, ShoppingCart, Cpu, Monitor, HardDrive } from 'lucide-re
 import Navbar from '../../components/common/Navbar';
 import Footer from '../../components/common/Footer';
 import Button from '../../components/common/Button';
+import { Link } from 'react-router-dom';
 
 const products = [
   {
@@ -78,33 +79,35 @@ const Catalog = () => {
             {/* Grille de Produits */}
             <div className="flex-grow grid grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-y-16 gap-x-8 pb-20">
               {products.map((product) => (
-                <div key={product.id} className="group cursor-pointer">
-                  {/* Image Container */}
-                  <div className="relative aspect-square bg-gray-50 overflow-hidden mb-6 border border-gray-100 group-hover:border-brand-red transition-colors duration-500">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="w-full h-full object-cover mix-blend-multiply grayscale hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105"
-                    />
-                    <div className="absolute top-4 left-4 bg-brand-red text-white text-[8px] font-black uppercase px-2 py-1">
-                      {product.category}
-                    </div>
-                  </div>
+                <Link to='/shop/product/:id'>
+                    <div key={product.id} className="group cursor-pointer">
+                        {/* Image Container */}
+                        <div className="relative aspect-square bg-gray-50 overflow-hidden mb-6 border border-gray-100 group-hover:border-brand-red transition-colors duration-500">
+                            <img 
+                            src={product.image} 
+                            alt={product.name}
+                            className="w-full h-full object-cover mix-blend-multiply grayscale hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105"
+                            />
+                            <div className="absolute top-4 left-4 bg-brand-red text-white text-[8px] font-black uppercase px-2 py-1">
+                            {product.category}
+                            </div>
+                        </div>
 
-                  {/* Infos Produit */}
-                  <div className="space-y-1">
-                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">{product.specs}</p>
-                    <h2 className="text-lg font-black italic uppercase tracking-tighter text-dark-gray group-hover:text-brand-red transition-colors leading-none">
-                      {product.name}
-                    </h2>
-                    <div className="flex justify-between items-end pt-4">
-                      <span className="text-xl font-bold tracking-tighter">{product.price}</span>
-                      <button className="p-3 bg-dark-gray text-white hover:bg-brand-red transition-all">
-                        <ShoppingCart size={18} />
-                      </button>
+                        {/* Infos Produit */}
+                        <div className="space-y-1">
+                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">{product.specs}</p>
+                            <h2 className="text-lg font-black italic uppercase tracking-tighter text-dark-gray group-hover:text-brand-red transition-colors leading-none">
+                            {product.name}
+                            </h2>
+                            <div className="flex justify-between items-end pt-4">
+                            <span className="text-xl font-bold tracking-tighter">{product.price}</span>
+                            <button className="p-3 bg-dark-gray text-white hover:bg-brand-red transition-all">
+                                <ShoppingCart size={18} />
+                            </button>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
