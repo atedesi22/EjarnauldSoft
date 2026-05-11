@@ -47,8 +47,12 @@ const Home = () => {
                 Tout ce dont votre infrastructure a besoin au même endroit.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button variant="primary" className="text-lg px-8">Voir nos services</Button>
-                <Button variant="outline" className="text-lg px-8">Visiter la boutique</Button>
+                {/* <Button className="text-lg  ">Nos Services</Button>
+                <Button  className="text-lg px-12 py-8">Nos Services</Button> */}
+                <button className=" bg-[#e60000] text-[20px] cursor-pointer duration-200 transition-all px-18 py-8 rounded-full hover:bg-white text-white hover:text-[#e60000] hover:border-1 font-extrabold hover:scale-105">Nos Services</button>
+                <button className=" bg-white border-[#e60000] duration-200 transition-all text-[20px] cursor-pointer font-extrabold text-[#e60000] hover:text-white border-1 px-18 py-8 rounded-full hover:bg-[#e60000] hover:scale-105">Nos Produits</button>
+
+                {/*variant="outline" <Button className="text-lg bg-white border-[#e60000] cursor-pointer px-12 py-8 rounded-4xl hover:bg-[#e60000] hover:scale-105 text-[15px]">Nos Produits</Button> */}
               </div>
             </div>
           </div>

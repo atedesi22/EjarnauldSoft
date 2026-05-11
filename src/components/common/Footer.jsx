@@ -12,7 +12,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-brand-dark rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">IT</span>
               </div>
-              <span className="text-lg font-bold">NOMBOITE</span>
+              <span className="text-lg font-bold">EJARNAULD-SOFT</span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">
               Solutions informatiques innovantes pour accompagner votre croissance numérique.
@@ -39,7 +39,7 @@ const Footer = () => {
 
           <div>
             <h4 className="font-bold text-brand-dark mb-4">Suivez-nous</h4>
-            // Dans la colonne Contact du Footer :
+          
             <ul className="space-y-4 text-sm text-gray-600">
             <li className="flex items-center gap-3">
                 <MapPin size={18} className="text-brand" /> Douala, Cameroun
@@ -57,7 +57,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-xs">
-            © 2026 NomBoite IT. Tous droits réservés.
+            © 2026 EJARNAULD-SOFT IT. Tous droits réservés.
           </p>
           <p className="text-gray-400 text-xs italic">
             Powered by <span className="text-brand font-semibold">NovaVerse</span>

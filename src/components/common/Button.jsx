@@ -1,13 +1,12 @@
 import React from 'react';
 import { Icon, Sparkles } from 'lucide-react';
 
-const Button = ({ children, variant = 'primary', icon: Icon, iconPosition = 'left', className = '', ...props }) => {  const variants = {
-    // Utilisation de tes rouges configurés
-    primary: 'bg-brand text-white hover:bg-brand-light active:bg-brand-dark',
-    outline: 'border-2 border-brand text-brand hover:bg-brand hover:text-white',
-    // Bouton spécial NovaVerse
+const Button = ({ children, variant = 'primary', icon: Icon, iconPosition = 'left', className = '', ...props }) => 
+    {  const variants = {
+    primary: 'bg-[#e60000] px-15 py-5 text-white hover:bg-white border-1 rounded-full cursor-pointer text-[15px]s',
+    outline: 'border-2 border-[#e60000] text-brand hover:bg-brand hover:text-white',
     nova: 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-200',
-    ghost: 'text-gray-600 hover:bg-gray-100'
+    ghost: 'text-gray-600 hover:bg-gray-100' // On garde NovaVerse à part pour l'identifier
   };
 
   return (
@@ -20,6 +19,13 @@ const Button = ({ children, variant = 'primary', icon: Icon, iconPosition = 'lef
         {children}
         {Icon && iconPosition === 'right' && <Icon size={18} />}
     </button>
+
+    // <button 
+    //   className={`px-8 py-3 font-bold uppercase tracking-widest text-xs transition-all duration-300 ${styles[variant]} ${className}`}
+    //   {...props}
+    // >
+    //   {children}
+    // </button>
   );
 };
 
