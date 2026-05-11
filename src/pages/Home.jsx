@@ -63,9 +63,11 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="mb-16">
-              <span className="text-brand-dark font-bold tracking-widest uppercase text-sm">Nos Prestations</span>
+              <span className="text-[#cc0000] font-bold tracking-widest uppercase text-sm">Nos Prestations</span>
+                {/* <div className="absolute top-0 left-0 -translate-y-1 translate-x-1 w-96 h-96 bg-red-600/5 rounded-full blur-2xl"></div> */}
               <h2 className="text-3xl font-bold text-gray-900 mt-2">
-                Des services conçus pour <span className="text-brand-dark">votre succès</span>
+                Des services conçus pour <span className="text-[#cc0000] ">          <div className="absolute top-0 left-0 -translate-y-1 translate-x-1 w-96 h-96 bg-red-600/5 rounded-full blur-2xl"></div>
+                  votre succès</span>
               </h2>
               <div className="w-20 h-1.5 bg-brand mt-4 rounded-full"></div>
             </div>
@@ -95,14 +97,14 @@ const Home = () => {
         {/* SECTION CTA BOUTIQUE RAPIDE */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-brand-dark rounded-3xl p-10 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="bg-[#cc0000] rounded-3xl p-10 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-8">
               <div className="text-center lg:text-left">
                 <h2 className="text-3xl font-bold text-white mb-4">Besoin de matériel spécifique ?</h2>
                 <p className="text-red-100 opacity-90">Découvrez notre catalogue de serveurs, stations de travail et accessoires IT.</p>
               </div>
-              <Button className="bg-white !text-brand-dark hover:bg-gray-100 px-10 py-4 text-lg font-bold">
+              <button className="bg-white rounded-full text-[#cc0000] cursor-pointer hover:bg-gray-100 px-10 py-4 text-lg font-bold">
                 Accéder à la Boutique
-              </Button>
+              </button>
             </div>
           </div>
         </section>
