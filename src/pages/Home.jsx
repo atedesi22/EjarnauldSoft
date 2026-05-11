@@ -36,33 +36,30 @@ const Home = () => {
       <main className="flex-grow">
         {/* SECTION HERO */}
         <section className="relative py-20 lg:py-32 overflow-hidden">
+          <div className="absolute top-0 left-0 -translate-y-1 translate-x-1 w-96 h-96 bg-red-600/5 rounded-full blur-2xl"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl lg:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
                 Propulsez votre entreprise vers <br />
-                <span className="text-brand">l'excellence numérique</span>
+                <span className="text-[#e60000]">l'excellence numérique</span>
               </h1>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
                 Expertise IT, vente de matériel professionnel et solutions logicielles sur mesure. 
                 Tout ce dont votre infrastructure a besoin au même endroit.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                {/* <Button className="text-lg  ">Nos Services</Button>
-                <Button  className="text-lg px-12 py-8">Nos Services</Button> */}
-                <button className=" bg-[#e60000] text-[20px] cursor-pointer duration-200 transition-all px-18 py-8 rounded-full hover:bg-white text-white hover:text-[#e60000] hover:border-1 font-extrabold hover:scale-105">Nos Services</button>
-                <button className=" bg-white border-[#e60000] duration-200 transition-all text-[20px] cursor-pointer font-extrabold text-[#e60000] hover:text-white border-1 px-18 py-8 rounded-full hover:bg-[#e60000] hover:scale-105">Nos Produits</button>
-
-                {/*variant="outline" <Button className="text-lg bg-white border-[#e60000] cursor-pointer px-12 py-8 rounded-4xl hover:bg-[#e60000] hover:scale-105 text-[15px]">Nos Produits</Button> */}
+                <button className=" bg-[#e60000] text-[20px] cursor-pointer duration-200 transition-all px-18 py-6 rounded-full hover:bg-white text-white hover:text-[#e60000] hover:border-1 font-extrabold hover:scale-105">Nos Services</button>
+                <button className=" bg-white border-[#e60000] duration-200 transition-all text-[20px] cursor-pointer font-extrabold text-[#e60000] hover:text-white border-1 px-18 py-6 rounded-full hover:bg-[#e60000] hover:scale-105">Nos Produits</button>
               </div>
             </div>
           </div>
           
           {/* Décoration subtile en arrière-plan */}
-          <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-brand-light/5 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="absolute top-0 right-0 -translate-y-1 translate-x-1 w-96 h-96 bg-red-600/5 rounded-full blur-2xl"></div>
         </section>
 
         {/* SECTION PRESTATIONS (SERVICES) */}
-        <section id="services" className="py-20 bg-ghost-white">
+        <section id="services" className="py-20 bg-gray-200/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="mb-16">
@@ -73,20 +70,22 @@ const Home = () => {
               <div className="w-20 h-1.5 bg-brand mt-4 rounded-full"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 max-sm:w-[95%] lg:grid-cols-4 gap-8 ">
               {services.map((service, index) => (
                 <div 
                   key={index} 
-                  className="group bg-pure-white p-8 rounded-2xl border border-gray-100 hover:border-brand-light transition-all"
+                  className="group bg-pure-white p-8 rounded-4xl border max-sm:active:bg-[#e60000] border-red-600 hover:bg-[#e60000] hover:scale-105 active:scale-105 transition-all duration-250 hover:text-white active:text-white"
                 >
-                  <div className="mb-6 p-3 bg-red-50 w-fit rounded-lg group-hover:bg-brand group-hover:text-white transition-colors">
+                  <div className="mb-6 p-3 bg-[#e60000] w-fit rounded-full group-hover:bg-white group-active:bg-white group-active:text-black group-hover:text-[#e60000] hover:scale-105 transition-all duration-250">
                     {service.icon} {/* L'icône Lucide ici */}
                   </div>
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-gray-500 text-sm mb-6">{service.description}</p>
-                  <Button variant="ghost" icon={ArrowRight} iconPosition="right" className="!p-0 text-brand">
-                    Détails
-                  </Button>
+                  <p className="text-gray-500 text-sm mb-6 hover:text-white active:text-white">{service.description}</p>
+                  {/* <Button variant="ghost" icon={ArrowRight} iconPosition="right" className="!p-0 text-brand">
+                    Détails!p-0 text-[#e60000]
+                  </Button> */}
+
+                  <button className='group text-black group-hover:bg-white group-hover:text-[#e60000] group-active:bg-white group-active:text-black font-bold hover:bg-gray-100 flex bg-[#e60000] rounded-full p-2'> Détails <ArrowRight/>  </button>
                 </div>
               ))}
             </div>
