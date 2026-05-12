@@ -1,23 +1,29 @@
 /* src/
-├── assets/             # Images, logos, icônes (ton logo, etc.)
-├── components/         # Composants réutilisables (Boutons, Inputs, Cards)
-│   ├── common/         # Navbar, Footer, Button, Logo
-│   ├── shop/           # ProductCard, CartItem, CategoryFilter
-│   └── services/       # ServiceCard, PricingTable
-├── layouts/            # Templates de structure (MainLayout, AuthLayout)
-├── pages/              # Les pages principales (tes 8 pages clés)
-│   ├── Home.jsx
-│   ├── Services.jsx
-│   ├── Shop/
-│   │   ├── Catalog.jsx
-│   │   └── ProductDetail.jsx
-│   ├── Auth/
-│   │   ├── Login.jsx   <-- Ici tu mettras le bouton NovaVerse
-│   │   └── Register.jsx
-│   └── Dashboard.jsx
-├── hooks/              # Custom hooks (ex: useCart, useAuth)
-├── context/            # Gestion d'état (CartContext, AuthContext)
-├── services/           # Appels API (Axios vers ton backend Laravel)
-├── utils/              # Fonctions utilitaires (formatage prix, dates)
-├── App.jsx             # Configuration des routes (React Router)
-└── main.jsx            # Point d'entrée #b30000 */
+├── assets/             # Images, logos de la boîte, icônes, illustrations
+├── components/         # Composants réutilisables (Atomiques)
+│   ├── ui/             # Buttons, Inputs, Cards, Badge, Modals (Base Tailwind)
+│   ├── layout/         # Navbar, Footer, Sidebar (Structure fixe)
+│   └── shared/         # Composants utilisés sur plusieurs pages (ex: SectionTitle)
+├── features/           # Logique métier découpée par domaine (Le plus propre !)
+│   ├── services/       # Tout ce qui concerne les prestations
+│   │   ├── components/ # ServiceCard, ServiceDetail
+│   │   └── ServiceList.jsx
+│   ├── shop/           # Tout ce qui concerne la boutique
+│   │   ├── components/ # ProductCard, CartDrawer, ProductFilter
+│   │   ├── hooks/      # useCart (gestion du panier)
+│   │   └── ProductList.jsx
+│   └── contact/        # Formulaire et validation
+├── hooks/              # Hooks personnalisés globaux (ex: useFetch, useAuth)
+├── pages/              # Les vues principales (Pages complètes)
+│   ├── Home.jsx        # Accueil (Hero, Aperçu Services, Best-sellers)
+│   ├── Services.jsx    # Liste complète des prestations
+│   ├── Boutique.jsx    # Catalogue produits
+│   ├── ProductPage.jsx # Détail d'un produit
+│   └── Contact.jsx     # Page de contact
+├── services/           # Appels API (Axios ou Fetch vers ton backend Laravel)
+│   ├── api.js          # Configuration de base d'Axios
+│   ├── serviceApi.js   # Endpoints pour les prestations
+│   └── shopApi.js      # Endpoints pour les produits
+├── store/              # Gestion d'état (Zustand ou Redux si besoin, sinon Context)
+├── utils/              # Fonctions utilitaires (formatage prix, dates, etc.)
+└── App.jsx             # Configuration des routes (React Router) */
