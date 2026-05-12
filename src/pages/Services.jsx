@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import QuoteModal from './components/QuoteModal';
 import { motion } from 'framer-motion';
 import { 
   Code2, ShieldCheck, Database, 
   Cloud, Smartphone, LineChart,
   ArrowRight, CheckCircle
 } from 'lucide-react';
+import QuoteModal from '../components/QuoteModal';
 
 const serviceList = [
   {
@@ -39,6 +41,12 @@ const fadeIn = {
 };
 
 const Services = () => {
+
+    const [modalData, setModalData] = useState({ isOpen: false, title: "" });
+    const openModal = (title) => setModalData({ isOpen: true, title });
+    const closeModal = () => setModalData({ isOpen: false, title: "" });
+
+
   return (
     <div className="pt-32 bg-slate-50">
       {/* --- HEADER DE PAGE --- */}
@@ -97,15 +105,28 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="flex items-center gap-2 text-red-600 font-bold group/btn">
-                    Demander un devis <ArrowRight size={18} className="group-hover/btn:translate-x-2 transition-transform" />
+                  <button 
+                    onClick={() => openModal(service.title)} // Ouvre le modal avec le bon titre
+                    className="flex items-center cursor-pointer gap-2 text-red-600 font-bold group/btn"
+                    >
+                    Demander un devis <ArrowRight size={18} />
                   </button>
                 </div>
+                
+                
+
               </div>
             </motion.div>
           ))}
         </div>
       </section>
+
+      {/* Appel du Modal en bas du fichier */}
+                <QuoteModal 
+                    isOpen={modalData.isOpen} 
+                    onClose={closeModal} 
+                    serviceTitle={modalData.title} 
+                />
 
       {/* --- SECTION MÉTHODOLOGIE (L'atout pro) --- */}
       <section className="bg-slate-900 py-24 text-white overflow-hidden">

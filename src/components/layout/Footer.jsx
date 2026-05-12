@@ -52,13 +52,13 @@ const Footer = () => {
             <ul className="space-y-4 text-sm">
               <li className="flex items-center gap-3"><MapPin size={18} className="text-[#cc0000]" /> Douala, Cameroun</li>
               <li className="flex items-center gap-3"><Phone size={18} className="text-[#cc0000]" /> +237 6XX XX XX XX</li>
-              <li className="flex items-center gap-3"><Mail size={18} className="text-[#cc0000]" /> contact@techcorp.cm</li>
+              <li className="flex items-center gap-3"><Mail size={18} className="text-[#cc0000]" /> contact@EJarnauld-Soft.cm</li>
             </ul>
           </div>
         </div>
 
         <div className="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} TECHCORP IT Solutions. Tous droits réservés.
+          © {new Date().getFullYear()} EJarnauld-Soft IT Solutions. Tous droits réservés.
         </div>
       </div>
     </footer>
