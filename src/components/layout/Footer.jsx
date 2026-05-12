@@ -28,10 +28,10 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-6">L'Entreprise</h4>
             <ul className="space-y-4 text-sm">
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">À propos de nous</li>
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">Nos réalisations</li>
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">Carrières</li>
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">Blog Tech</li>
+              <li className="hover:text-red-400 transition-colors cursor-pointer">À propos de nous</li>
+              <li className="hover:text-red-400 transition-colors cursor-pointer">Nos réalisations</li>
+              <li className="hover:text-red-400 transition-colors cursor-pointer">Carrières</li>
+              <li className="hover:text-red-400 transition-colors cursor-pointer">Blog Tech</li>
             </ul>
           </div>
 
@@ -39,10 +39,10 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-6">Services</h4>
             <ul className="space-y-4 text-sm">
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">Cloud Computing</li>
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">Cybersécurité</li>
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">Audit & Conseil</li>
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">DevOps</li>
+              <li className="hover:text-red-400 transition-colors cursor-pointer">Cloud Computing</li>
+              <li className="hover:text-red-400 transition-colors cursor-pointer">Cybersécurité</li>
+              <li className="hover:text-red-400 transition-colors cursor-pointer">Audit & Conseil</li>
+              <li className="hover:text-red-400 transition-colors cursor-pointer">DevOps</li>
             </ul>
           </div>
 

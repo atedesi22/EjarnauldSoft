@@ -118,14 +118,14 @@ const Home = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-blue-400 font-bold mb-4">BOUTIQUE PREMIUM</h2>
+              <h2 className="text-red-400 font-bold mb-4">BOUTIQUE PREMIUM</h2>
               <h3 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight">
                 Équipez votre entreprise avec le meilleur du Hardware.
               </h3>
               <ul className="space-y-4 mb-10">
                 {["Serveurs hautes performances", "Postes de travail optimisés", "Composants réseaux"].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="text-blue-400" size={20} />
+                    <CheckCircle2 className="text-red-400" size={20} />
                     <span className="text-slate-300">{item}</span>
                   </li>
                 ))}
@@ -133,7 +133,7 @@ const Home = () => {
               <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#e60000] text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-blue-900/40"
+                className="bg-[#e60000] text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-red-900/40"
               >
                 Découvrir le catalogue
               </motion.button>
@@ -155,7 +155,7 @@ const Home = () => {
               <motion.div 
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-10 -right-6 bg-[#e60000] p-6 rounded-2xl shadow-2xl border border-blue-400"
+                className="absolute -top-10 -right-6 bg-[#e60000] p-6 rounded-2xl shadow-2xl border border-red-400"
               >
                 <Zap className="text-white" size={32} />
               </motion.div>
@@ -174,7 +174,7 @@ const ServiceCard = ({ icon, title, desc }) => (
     whileHover={{ y: -10 }}
     className="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group"
   >
-    <div className="w-14 h-14 bg-blue-50 text-[#e60000] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#e60000] group-hover:text-white transition-colors duration-300">
+    <div className="w-14 h-14 bg-red-50 text-[#e60000] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#e60000] group-hover:text-white transition-colors duration-300">
       {icon}
     </div>
     <h3 className="text-xl font-bold text-slate-900 mb-4">{title}</h3>

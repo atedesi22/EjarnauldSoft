@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-50 px-6 lg:px-20">
       {/* Background Decor - Petites formes abstraites pour le côté IT */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" />
+      <div className="absolute top-20 left-10 w-64 h-64 bg-red-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" />
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" />
 
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -40,7 +40,7 @@ const Hero = () => {
         >
           <motion.span 
             variants={itemVariants}
-            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider text-[#e60000] uppercase bg-blue-50 rounded-full"
+            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider text-[#e60000] uppercase bg-red-50 rounded-full"
           >
             Expertise IT & Solutions Digitales
           </motion.span>
@@ -68,7 +68,7 @@ const Hero = () => {
             <motion.button 
               whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(37, 99, 235, 0.2)" }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-8 py-4 bg-[#e60000] text-white rounded-xl font-bold transition-colors hover:bg-blue-700 shadow-lg shadow-blue-200"
+              className="flex items-center gap-2 px-8 py-4 bg-[#e60000] text-white rounded-xl font-bold transition-colors hover:bg-red-700 shadow-lg shadow-red-200"
             >
               Nos Services <ArrowRight size={20} />
             </motion.button>
