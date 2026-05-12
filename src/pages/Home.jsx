@@ -5,7 +5,8 @@ import {
   ArrowRight, CheckCircle2, Star, 
   Smartphone, Monitor, Zap 
 } from 'lucide-react';
-import Hero from './components/Hero'; // Le composant qu'on a fait avant
+import Hero from '../components/Hero';
+// import Hero from './components/Hero'; // Le composant qu'on a fait avant
 
 // 1. Variantes globales pour le scroll
 const fadeInInView = {
@@ -29,7 +30,7 @@ const Home = () => {
   return (
     <div className="bg-slate-50 overflow-x-hidden">
       {/* 1. HERO SECTION */}
-      <Hero />
+      <Hero/>
 
       {/* 2. SECTION STATS (Preuve sociale) */}
       <section className="py-12 bg-white border-y border-slate-100">
@@ -48,7 +49,7 @@ const Home = () => {
               { label: "Support", value: "24/7" },
             ].map((stat, i) => (
               <motion.div key={i} variants={fadeInInView}>
-                <h3 className="text-3xl font-bold text-blue-600 mb-1">{stat.value}</h3>
+                <h3 className="text-3xl font-bold text-[#e60000] mb-1">{stat.value}</h3>
                 <p className="text-slate-500 text-sm font-medium uppercase tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
@@ -66,14 +67,14 @@ const Home = () => {
               viewport={{ once: true }}
               className="max-w-2xl"
             >
-              <h2 className="text-blue-600 font-bold mb-4">NOS PRESTATIONS</h2>
+              <h2 className="text-[#e60000] font-bold mb-4">NOS PRESTATIONS</h2>
               <p className="text-4xl font-extrabold text-slate-900 mb-6">
                 Des solutions technologiques conçues pour votre croissance.
               </p>
             </motion.div>
             <motion.button 
               whileHover={{ x: 5 }}
-              className="flex items-center gap-2 text-blue-600 font-bold border-b-2 border-blue-600 pb-1"
+              className="flex items-center gap-2 text-[#e60000] font-bold border-b-2 border-[#e60000] pb-1"
             >
               Voir tous les services <ArrowRight size={18} />
             </motion.button>
@@ -108,7 +109,7 @@ const Home = () => {
       {/* 4. SECTION BOUTIQUE (Preview) */}
       <section className="py-24 bg-slate-900 text-white rounded-[3rem] mx-4 lg:mx-10 mb-10 overflow-hidden relative">
         {/* Décoration de fond */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 blur-[100px] rounded-full" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#e60000]/20 blur-[100px] rounded-full" />
         
         <div className="container mx-auto px-10 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -132,7 +133,7 @@ const Home = () => {
               <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-blue-900/40"
+                className="bg-[#e60000] text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-blue-900/40"
               >
                 Découvrir le catalogue
               </motion.button>
@@ -154,7 +155,7 @@ const Home = () => {
               <motion.div 
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-10 -right-6 bg-blue-600 p-6 rounded-2xl shadow-2xl border border-blue-400"
+                className="absolute -top-10 -right-6 bg-[#e60000] p-6 rounded-2xl shadow-2xl border border-blue-400"
               >
                 <Zap className="text-white" size={32} />
               </motion.div>
@@ -173,12 +174,12 @@ const ServiceCard = ({ icon, title, desc }) => (
     whileHover={{ y: -10 }}
     className="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group"
   >
-    <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+    <div className="w-14 h-14 bg-blue-50 text-[#e60000] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#e60000] group-hover:text-white transition-colors duration-300">
       {icon}
     </div>
     <h3 className="text-xl font-bold text-slate-900 mb-4">{title}</h3>
     <p className="text-slate-600 leading-relaxed mb-6">{desc}</p>
-    <button className="flex items-center gap-2 text-blue-600 font-bold text-sm">
+    <button className="flex items-center gap-2 text-[#e60000] font-bold text-sm">
       En savoir plus <ArrowRight size={16} />
     </button>
   </motion.div>

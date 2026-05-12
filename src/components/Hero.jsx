@@ -40,7 +40,7 @@ const Hero = () => {
         >
           <motion.span 
             variants={itemVariants}
-            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider text-blue-600 uppercase bg-blue-50 rounded-full"
+            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider text-[#e60000] uppercase bg-blue-50 rounded-full"
           >
             Expertise IT & Solutions Digitales
           </motion.span>
@@ -49,7 +49,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-6"
           >
-            Propulsez votre <span className="text-blue-600">Vision</span> vers le futur.
+            Propulsez votre <span className="text-[#e60000]">Vision</span> vers le futur.
           </motion.h1>
 
           <motion.p 
@@ -68,7 +68,7 @@ const Hero = () => {
             <motion.button 
               whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(37, 99, 235, 0.2)" }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-xl font-bold transition-colors hover:bg-blue-700 shadow-lg shadow-blue-200"
+              className="flex items-center gap-2 px-8 py-4 bg-[#e60000] text-white rounded-xl font-bold transition-colors hover:bg-blue-700 shadow-lg shadow-blue-200"
             >
               Nos Services <ArrowRight size={20} />
             </motion.button>
@@ -97,7 +97,7 @@ const Hero = () => {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             className="relative z-10 w-full"
           >
-            <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-[2rem] p-4 shadow-2xl">
+            <div className="bg-gradient-to-br from-[#cc0000] to-red-950 rounded-[2rem] p-4 shadow-2xl">
                 {/* Remplace par une image de tech ou un mock-up de dashboard */}
                 <img 
                     src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1000" 
