@@ -61,7 +61,10 @@ const Navbar = () => {
           className="absolute top-full left-0 w-full bg-white shadow-xl py-6 flex flex-col items-center gap-6 md:hidden"
         >
           {['Accueil', 'Services', 'Boutique', 'Contact'].map((item) => (
-            <Link key={item} to="/" className="font-bold text-slate-800" onClick={() => setIsOpen(false)}>
+            <Link 
+              key={item} 
+              to={item === 'Accueil' ? '/' : `/${item.toLowerCase()}`}
+              className="font-bold text-slate-800" onClick={() => setIsOpen(false)}>
               {item}
             </Link>
           ))}
