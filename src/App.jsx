@@ -9,7 +9,7 @@ import Footer from './components/layout/Footer';
 // Import de tes Pages
 import Home from './pages/Home';
 // On prépare les imports pour les futures pages
-// import Services from './pages/Services';
+import Services from './pages/Services';
 // import Boutique from './pages/Boutique';
 // import Contact from './pages/Contact';
 
@@ -42,7 +42,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               
               {/* On prépare les autres routes pour ton test */}
-              {/* <Route path="/services" element={<Services />} /> */}
+              <Route path="/services" element={<Services />} />
               {/* <Route path="/boutique" element={<Boutique />} /> */}
               {/* <Route path="/contact" element={<Contact />} /> */}
               
