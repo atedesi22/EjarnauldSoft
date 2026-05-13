@@ -4,34 +4,80 @@ import { motion } from 'framer-motion';
 import { 
   Code2, ShieldCheck, Database, 
   Cloud, Smartphone, LineChart,
-  ArrowRight, CheckCircle
+  ArrowRight, CheckCircle,
+  Globe,
+  Activity,
+  PhoneCall,
+  GraduationCap,
+  Settings,
+  Cable,
+  Globe2,
+  Key,
+  Video,
+  ShieldAlert
 } from 'lucide-react';
 import QuoteModal from '../components/QuoteModal';
 
 const serviceList = [
   {
-    icon: <Code2 size={32} />,
-    title: "Développement Sur-Mesure",
-    desc: "Nous concevons des applications web et mobiles robustes avec les dernières technologies (React, Laravel, NativePHP).",
-    features: ["PWA & Mobile Native", "API RESTful", "Architecture Micro-services"]
+    icon: <Globe size={32} />,
+    title: "Réseaux Informatique",
+    desc: "Conception et déploiement d'architectures réseaux robustes pour une connectivité fluide et performante au sein de votre structure.",
+    features: ["Architecture LAN/WAN/WLAN", "Optimisation de bande passante", "Segmentation réseau (VLAN)", "Protocoles de routage avancés"]
   },
   {
-    icon: <ShieldCheck size={32} />,
-    title: "Sécurité & Audit",
-    desc: "Protection de vos actifs numériques et mise en conformité de vos infrastructures critiques.",
-    features: ["Tests d'intrusion", "Cryptage de données", "Audit de code"]
+    icon: <Activity size={32} />,
+    title: "Infogérance",
+    desc: "Externalisation de la gestion de votre SI pour vous permettre de vous concentrer sur votre cœur de métier en toute sérénité.",
+    features: ["Supervision 24/7 des systèmes", "Gestion des serveurs & parcs", "Support technique illimité", "Externalisation des sauvegardes"]
   },
   {
-    icon: <Cloud size={32} />,
-    title: "Solutions Cloud",
-    desc: "Migration et gestion de vos serveurs sur des infrastructures haute disponibilité.",
-    features: ["Hébergement managé", "Scalabilité automatique", "Sauvegardes hybrides"]
+    icon: <PhoneCall size={32} />,
+    title: "Téléphonie d'Entreprise",
+    desc: "Solutions de communication unifiée (VoIP/PABX) pour moderniser vos échanges et réduire vos coûts de communication.",
+    features: ["Standard téléphonique IP", "Audioconférence & Visio", "Convergence fixe-mobile", "Messagerie unifiée"]
   },
   {
-    icon: <Database size={32} />,
-    title: "Data & Analytics",
-    desc: "Transformez vos données brutes en outils d'aide à la décision stratégique.",
-    features: ["Visualisation de données", "Big Data", "Intelligence Artificielle"]
+    icon: <ShieldAlert size={32} />,
+    title: "Sécurité Informatique",
+    desc: "Protection intégrale de vos données et de vos systèmes contre les cybermenaces et les intrusions malveillantes.",
+    features: ["Pare-feu (Firewall) Next-Gen", "Antivirus & Endpoint Protection", "Audit de vulnérabilité", "Gestion des accès (IAM)"]
+  },
+  {
+    icon: <Video size={32} />,
+    title: "Vidéosurveillance",
+    desc: "Systèmes de surveillance intelligente IP pour une protection optimale de vos locaux avec accès à distance en temps réel.",
+    features: ["Caméras Haute Définition", "Enregistrement sur NVR/Cloud", "Détection de mouvement IA", "Vision nocturne infrarouge"]
+  },
+  {
+    icon: <Key size={32} />,
+    title: "Contrôle d'Accès",
+    desc: "Gestion sécurisée des flux de personnes pour garantir que seuls les utilisateurs autorisés accèdent à vos zones sensibles.",
+    features: ["Lecteurs biométriques", "Badges RFID & Digicodes", "Gestion d'horaires d'accès", "Historique des passages"]
+  },
+  {
+    icon: <Globe2 size={32} />,
+    title: "Services Web",
+    desc: "Développement de plateformes web sur mesure et hébergement haute performance pour booster votre présence digitale.",
+    features: ["Sites Vitrines & E-commerce", "Applications Web (PWA)", "Hébergement managé", "Référencement SEO"]
+  },
+  {
+    icon: <Cable size={32} />,
+    title: "Câblage Informatique",
+    desc: "Installation de réseaux filaires structurés respectant les normes internationales pour une transmission de données sans faille.",
+    features: ["Câblage Cuivre (Cat 6/7)", "Déploiement Fibre Optique", "Certification de prises", "Baies & Coffrets réseaux"]
+  },
+  {
+    icon: <Settings size={32} />,
+    title: "Maintenance Informatique",
+    desc: "Interventions préventives et curatives pour garantir la longévité et la disponibilité constante de vos équipements.",
+    features: ["Nettoyage système & hardware", "Mises à jour critiques", "Dépannage hardware", "Optimisation des performances"]
+  },
+  {
+    icon: <GraduationCap size={32} />,
+    title: "Formation",
+    desc: "Transfert de compétences pour vos équipes sur les nouveaux outils technologiques et les bonnes pratiques de sécurité.",
+    features: ["Bureautique avancée", "Sensibilisation cybersécurité", "Administration systèmes", "Outils collaboratifs"]
   }
 ];
 
